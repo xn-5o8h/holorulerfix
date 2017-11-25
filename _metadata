@@ -1,0 +1,10 @@
+{
+  "author" : "Pygmyowl",
+  "description" : "The 1.2 changed the table of a function which broke the holoruler, here's a patch until the original author fixes it\n\n\nI changed 4 lines\n\n[code]function update()\n\n  local redraw = false\n  local holoRulerConfig = activeItemAnimation.animationParameter(\"holoRulerConfig\")\n  if holoRulerConfig == nil then return end\n  local point1 = activeItemAnimation.animationParameter(\"point1\")\n  local point2 = activeItemAnimation.animationParameter(\"point2\")\n  local userPos = activeItemAnimation.animationParameter(\"userPos\")[/code]\n\n[quote=\"http://playstarbound.com/starbound-vault-update/\"]Removed activeItemAnimation.animationParameter (replaced with animationConfig.animationParameter)[/quote]\n\n[code]function update()\n\n  local redraw = false\n  local holoRulerConfig = animationConfig.animationParameter(\"holoRulerConfig\")\n  if holoRulerConfig == nil then return end\n  local point1 = animationConfig.animationParameter(\"point1\")\n  local point2 = animationConfig.animationParameter(\"point2\")\n  local userPos = animationConfig.animationParameter(\"userPos\")[/code]\n\n\nUpdate: The 1.3 changed a few more bindings and this interface is kind of a mess, I'd say it should be redone but I just fixed the bindings instead because I'm lazy and it works that way.",
+  "friendlyName" : "Holographic Ruler fix",
+  "link" : "steam://url/CommunityFilePage/883901189",
+  "name" : "HoloRulertemporarypatch",
+  "requires" : ["HoloRuler"],
+  "steamContentId" : "883901189",
+  "version" : "0.1.3"
+}
